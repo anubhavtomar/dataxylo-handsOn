@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row margin-10">
+		<div class="column col-md-6 right font-xl">Photo Library</div>
+		<div class="column col-md-6 right">
+			<button type="button" class="btn btn-danger btn-circle btn-xl" ng-click="showModal = !showModal">
+				<i class="glyphicon glyphicon-plus"></i>
+			</button>
+		</div>
+	</div>
+
+	<div class="row margin-10">
+		<div class="form-group w-100 has-feedback">
+			<i class="glyphicon glyphicon-search form-control-feedback"></i>
+			<input type="text" class="form-control" placeholder="Search Text ...">
+	    </div>
+	</div>
+
+</div>
+
+<div ng-show="showModal">
+	<div class="modal-overlay"></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="showModal = !showModal">&times;</button>
+				<h4 class="modal-title">Add Photo</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="row margin-10">
+					<div class="column col-md-6">
+						<input type="file" name="pic" image="image" accept="image/*" placeholder="SELECT FILE">
+				    </div>
+
+				    <div class="column col-md-6">
+				    	<!-- <input type="text" image="image" class="form-control" placeholder="Enter Url ..."> -->
+				    </div>	
+				</div>
+
+				<div class="row margin-10">
+					<div class="column col-md-12">
+				    	<input type="text" class="form-control"  ng-model="description" placeholder="Enter Description ...">
+				    </div>	
+				</div>
+				
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" ng-click="uploadPicture(image)">Upload</button>
+			</div>
+		</div>
+	</div>
+</div>
