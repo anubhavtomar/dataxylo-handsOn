@@ -4,3 +4,6 @@ For JS problems goto problems. In problems, tasks is a node application. It has 
 
 Run it by writting 'node app.js' in terminal.
 
+For Mean App run 'sails lift --dev' in terminal 
+
+
